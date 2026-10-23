@@ -6,6 +6,7 @@ import GlowProductsSection from "./components/GlowProductsSection";
 import Gallery from "./components/Gallery";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection"; 
+import FooterSection from "./components/FooterSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Gallery />
       <TestimonialsSection />
       <ContactSection />
+      <FooterSection />
     </main>
   );
 }
