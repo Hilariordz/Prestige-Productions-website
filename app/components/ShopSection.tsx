@@ -9,8 +9,16 @@ const products = [
 
 export default function GlowSection() {
   return (
-    <section className="w-full bg-[#0B0B0B] px-5 py-14 text-white md:px-12 md:py-20 lg:px-24">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
+    <section className="relative w-full overflow-hidden px-5 py-14 text-white md:px-12 md:py-20 lg:px-24">
+      <Image
+        src="/images/prestige-glow-party-background-v2.webp"
+        alt=""
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-black/45" />
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
         <div className="lg:col-span-4">
           <p className="font-serif text-lg italic text-[#D4AF37]">Shop</p>
           <h2 className="mt-2 font-serif text-4xl leading-[1.1] text-white md:text-5xl">

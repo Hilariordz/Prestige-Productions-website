@@ -3,7 +3,15 @@ import Image from 'next/image';
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-[#FAF8F5] text-[#1A1A1A] py-16 px-6 md:px-16 lg:px-24 min-h-[500px] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(#EADECB_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none" />
+      <Image
+        src="/images/prestige-hero-white-gold-marble.webp"
+        alt=""
+        fill
+        className="object-cover opacity-45 pointer-events-none"
+        sizes="100vw"
+        priority
+      />
+      <div className="absolute inset-0 bg-[#FAF8F5]/45 pointer-events-none" />
 
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
@@ -71,7 +79,7 @@ export default function HeroSection() {
 
           <div className="absolute top-8 left-0 sm:left-6 w-[220px] sm:w-[280px] h-[280px] sm:h-[340px] rounded-2xl overflow-hidden shadow-xl z-10 border border-white/20">
             <Image
-              src="/window.svg"
+              src=""
               alt="DJ Mixing Board"
               fill
               className="object-cover"
@@ -82,7 +90,7 @@ export default function HeroSection() {
 
           <div className="absolute bottom-0 right-0 sm:right-4 w-[240px] sm:w-[310px] h-[300px] sm:h-[370px] rounded-2xl overflow-hidden shadow-2xl z-20 border-2 border-white">
             <Image
-              src="/globe.svg"
+              src=""
               alt="Wedding Celebration"
               fill
               className="object-cover"

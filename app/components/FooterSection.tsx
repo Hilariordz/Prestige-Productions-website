@@ -3,20 +3,20 @@ import Image from 'next/image';
 export default function FooterSection() {
   return (
     <footer className="w-full bg-[#0A0A0A] text-white">
-      <div className="relative w-full py-16 px-6 md:px-16 overflow-hidden flex flex-col items-center justify-center text-center">
+      <div className="relative w-full aspect-[6.4/1] min-h-32 max-h-44 px-6 md:px-16 overflow-hidden flex flex-col items-center justify-center text-center">
         <Image
-          src=""
+          src="/images/prestige-party-closing-banner.webp"
           alt="Party crowd with confetti"
           fill
-          className="object-cover opacity-35"
+          className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/40 to-[#0A0A0A]" />
+        <div className="absolute inset-0 bg-black/25" />
 
-        <div className="relative z-10 max-w-3xl space-y-6">
-          <h2 className="text-3xl md:text-5xl font-serif text-[#D4AF37] leading-tight">
+        <div className="relative z-10 max-w-3xl space-y-3">
+          <h2 className="text-2xl md:text-4xl font-serif text-[#D4AF37] leading-tight">
             Your Date Is Waiting. <br />
-            Let's Make It Legendary.
+            Let&apos;s Make It Legendary.
           </h2>
 
           <div>
@@ -35,8 +35,27 @@ export default function FooterSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-16 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-4 flex flex-col items-start space-y-3">
-            
+          <div className="md:col-span-4 flex flex-col items-start space-y-3 text-xs text-gray-400">
+            <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
+              Contact
+            </h3>
+            <a href="tel:+15639492762" className="hover:text-white transition-colors">
+              563.949.2762
+            </a>
+            <a href="mailto:PrestigeProductionsqc@gmail.com" className="hover:text-white transition-colors">
+              PrestigeProductionsqc@gmail.com
+            </a>
+            <a
+              href="https://prestigeproductionsqc.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Prestigeproductionsqc.com
+            </a>
+            <p className="max-w-xs leading-relaxed">
+              Mobile service with no physical address. Traveling internationally across the USA, Mexico, Canada, and South America.
+            </p>
           </div>
 
           <div className="md:col-span-3 space-y-3 md:border-r border-gray-800 pr-4">
