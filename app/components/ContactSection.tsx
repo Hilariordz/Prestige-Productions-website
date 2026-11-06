@@ -1,6 +1,45 @@
 "use client";
 
+import { useState } from "react";
+import toast from "react-hot-toast";
+
 export default function ContactSection() {
+  const [isSending, setIsSending] = useState(false);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSending(true);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      eventDate: formData.get("eventDate"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json()) as { message?: string; error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error ?? "Unable to send your message.");
+      }
+
+      form.reset();
+      toast.success(result.message ?? "Your message has been sent.");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Unable to send your message.");
+    } finally {
+      setIsSending(false);
+    }
+  }
+
   return (
     <section className="w-full bg-[#FAF8F5] text-[#1A1A1A] py-16 px-6 md:px-16 lg:px-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -53,11 +92,13 @@ export default function ContactSection() {
             </svg>
           </div>
 
-          <form className="space-y-4 relative z-10" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-4 relative z-10" onSubmit={handleSubmit}>
             <div>
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-white/80 border border-[#E2DAD0] text-sm text-[#111111] placeholder-[#A0988E] focus:outline-none focus:border-[#C59B27] transition-colors"
               />
             </div>
@@ -65,7 +106,9 @@ export default function ContactSection() {
             <div>
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-white/80 border border-[#E2DAD0] text-sm text-[#111111] placeholder-[#A0988E] focus:outline-none focus:border-[#C59B27] transition-colors"
               />
             </div>
@@ -73,7 +116,9 @@ export default function ContactSection() {
             <div className="relative">
               <input
                 type="text"
+                name="eventDate"
                 placeholder="Event Date"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-white/80 border border-[#E2DAD0] text-sm text-[#111111] placeholder-[#A0988E] focus:outline-none focus:border-[#C59B27] transition-colors"
               />
               <svg className="w-5 h-5 text-[#A0988E] absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,8 +128,10 @@ export default function ContactSection() {
 
             <div>
               <textarea
+                name="message"
                 rows={4}
                 placeholder="Message"
+                required
                 className="w-full px-4 py-3 rounded-lg bg-white/80 border border-[#E2DAD0] text-sm text-[#111111] placeholder-[#A0988E] focus:outline-none focus:border-[#C59B27] transition-colors resize-none"
               />
             </div>
@@ -92,9 +139,10 @@ export default function ContactSection() {
             <div className="flex justify-end pt-2">
               <button
                 type="submit"
+                disabled={isSending}
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-[#D4AF37] via-[#E6CA65] to-[#B89726] text-black font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:brightness-105"
               >
-                Send
+                {isSending ? "Sending..." : "Send"}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
