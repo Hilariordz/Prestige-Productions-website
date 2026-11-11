@@ -78,14 +78,14 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
           <ServiceCard
             large
-            src="/services/dj.jpg"
+            src="/images/13470.webp"
             title="Extraordinary nights."
             className="min-h-[340px] sm:min-h-[400px] md:min-h-[480px]"
           />
 
           <div className="flex flex-col gap-4 md:gap-5">
             <ServiceCard
-              src="/services/sound.jpg"
+              src="/images/782.webp"
               title="The Sound"
               subtitle="DJ • Music that moves you."
               className="h-[200px] md:h-[225px]"
@@ -93,13 +93,13 @@ export default function ServicesSection() {
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5">
               <ServiceCard
-                src="/services/voice.jpg"
+                src="/images/1231.webp"
                 title="The Voice"
                 subtitle="MC / Emcee • Every moment, connected."
                 className="h-[220px] md:h-[240px]"
               />
               <ServiceCard
-                src="/services/experience.jpg"
+                src="/images/IMG_1123.webp"
                 title="The Full Experience"
                 subtitle="Event Packages • Seamless from start to finish."
                 className="h-[220px] md:h-[240px]"

@@ -1,6 +1,36 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-export default function FooterSection() {
+export default function FooterSection({ compact = false }: { compact?: boolean }) {
+  if (compact) {
+    return (
+      <footer className="w-full bg-[#0a0a0a] px-6 py-7 text-white md:px-12">
+        <div className="mx-auto flex max-w-[1080px] flex-col items-center justify-between gap-5 md:flex-row">
+          <Image
+            src="/images/1340.webp"
+            alt="Prestige Productions"
+            width={160}
+            height={50}
+            className="h-11 w-auto object-contain"
+          />
+          <nav className="flex flex-wrap justify-center gap-5 text-xs text-white/80">
+            <Link href="/about" className="hover:text-[#d4af37]">About</Link>
+            <Link href="/#services" className="hover:text-[#d4af37]">Services</Link>
+            <Link href="/#gallery" className="hover:text-[#d4af37]">Gallery</Link>
+            <Link href="/#reviews" className="hover:text-[#d4af37]">Reviews</Link>
+            <Link href="/#contact" className="hover:text-[#d4af37]">Contact</Link>
+          </nav>
+          <div className="flex gap-4 text-xs text-white/80" aria-label="Social media">
+            <a href="https://www.instagram.com/prestigeproductionsqc/" aria-label="Instagram">Instagram</a>
+            <a href="https://www.facebook.com/Prestigeproductionsqc/" aria-label="Facebook">Facebook</a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+        <p className="mt-5 text-center text-[11px] text-white/60">© 2026 Prestige Productions. All rights reserved.</p>
+      </footer>
+    );
+  }
+
   return (
     <footer className="w-full bg-[#0A0A0A] text-white">
       <div className="relative w-full aspect-[6.4/1] min-h-32 max-h-44 px-6 md:px-16 overflow-hidden flex flex-col items-center justify-center text-center">
@@ -35,6 +65,16 @@ export default function FooterSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-16 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div className="md:col-span-12">
+            <Image
+              src="/images/1340.webp"
+              alt="Prestige Productions"
+              width={160}
+              height={50}
+              className="h-11 w-auto object-contain"
+            />
+          </div>
+
           <div className="md:col-span-4 flex flex-col items-start space-y-3 text-xs text-gray-400">
             <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Contact
@@ -63,7 +103,7 @@ export default function FooterSection() {
               Quick Links
             </h3>
             <ul className="space-y-2 text-xs text-gray-400">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#gallery" className="hover:text-white transition-colors">Gallery</a></li>
               <li><a href="#reviews" className="hover:text-white transition-colors">Reviews</a></li>

@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/#services", label: "Services" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/#reviews", label: "Reviews" },
@@ -18,8 +19,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {}
-        <Link href="/" className="flex flex-col leading-none text-[#C9A44C]">
-          
+        <Link href="/" className="flex items-center leading-none text-[#C9A44C]">
+          <Image
+            src="/images/1340.webp"
+            alt="Prestige Productions"
+            width={140}
+            height={44}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {}

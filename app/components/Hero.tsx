@@ -79,7 +79,7 @@ export default function HeroSection() {
 
           <div className="absolute top-8 left-0 sm:left-6 w-[220px] sm:w-[280px] h-[280px] sm:h-[340px] rounded-2xl overflow-hidden shadow-xl z-10 border border-white/20">
             <Image
-              src=""
+              src="/images/13470.webp"
               alt="DJ Mixing Board"
               fill
               className="object-cover"
@@ -90,7 +90,7 @@ export default function HeroSection() {
 
           <div className="absolute bottom-0 right-0 sm:right-4 w-[240px] sm:w-[310px] h-[300px] sm:h-[370px] rounded-2xl overflow-hidden shadow-2xl z-20 border-2 border-white">
             <Image
-              src=""
+              src="/images/27978.webp"
               alt="Wedding Celebration"
               fill
               className="object-cover"

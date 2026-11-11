@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="w-full">
+    <section id="about" className="w-full">
       <div className="bg-[#0B0B0B] py-3">
         <div className="flex items-center justify-center gap-4 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37]">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4AF37]" />
@@ -14,7 +14,7 @@ export default function AboutSection() {
       <div className="relative overflow-hidden bg-[#F4F0EA]">
         <div className="absolute inset-y-0 right-0 w-full md:w-[45%]">
           <Image
-            src="/host.jpg"
+            src="/images/host.webp"
             alt="The Host"
             fill
             priority
