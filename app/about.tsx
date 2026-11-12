@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function AboutSectionIdentica() {
+export default function AboutSectionModerna() {
   return (
     <section
       className="relative w-full overflow-hidden bg-[#faf9f7] px-6 py-16 font-sans text-[#252525] md:px-12 md:py-[4.5rem]"
@@ -8,8 +8,12 @@ export default function AboutSectionIdentica() {
     >
       <div className="pointer-events-none absolute inset-0 bg-white/70" />
 
-      <div className="relative mx-auto grid max-w-[1080px] grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-12">
-        <div className="md:col-span-7 flex flex-col">
+      {/* Grid principal */}
+      <div className="relative mx-auto grid max-w-[1080px] grid-cols-1 items-start gap-8 md:grid-cols-12 md:gap-12">
+        
+        {/* ===== Columna de Texto Principal ===== */}
+        {/* En móvil: aparece abajo de la foto (order-2). En desktop: a la izquierda (md:col-span-7 md:order-1) */}
+        <div className="order-2 md:order-1 md:col-span-7 flex flex-col">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#bd9020]">
             About Prestige Productions
           </p>
@@ -19,6 +23,7 @@ export default function AboutSectionIdentica() {
             Our Prestige.
           </h1>
 
+          {/* En mobile, colocamos un bloque de texto introductorio corto aquí si se desea, o pasamos directo a los bloques */}
           <div className="mb-6 mt-6 h-[4px] w-20 bg-[#c89c26]" />
 
           <div className="space-y-4 text-[15px] leading-[1.35] text-[#303030] md:text-[16px]">
@@ -71,14 +76,17 @@ export default function AboutSectionIdentica() {
           </div>
         </div>
 
-        <figure className="flex self-start flex-col items-center md:sticky md:top-24 md:col-span-5">
-          <div className="w-full max-w-[390px] bg-stone-900 shadow-lg">
+        {/* ===== Columna de la Imagen (Tendencia Mobile-First) ===== */}
+        {/* En móvil: se muestra PRIMERO (order-1) para enganchar al usuario visualmente. En desktop: va a la derecha (md:order-2 md:col-span-5) */}
+        <figure className="order-1 md:order-2 flex flex-col items-center mx-auto w-full max-w-[390px] md:max-w-none md:sticky md:top-24 md:col-span-5 mb-6 md:mb-0">
+          <div className="w-full bg-stone-900 shadow-lg">
             <Image
               src="/images/1338.webp"
               alt="The Host Behind Your Night"
               width={900}
               height={1200}
               className="w-full h-auto object-cover grayscale contrast-110"
+              priority
             />
           </div>
           <figcaption className="mt-2 text-center font-serif text-sm italic tracking-wide text-stone-600">
@@ -88,12 +96,14 @@ export default function AboutSectionIdentica() {
 
       </div>
 
+      {/* ===== Divisor con rombo e hilos laterales ===== */}
       <div className="relative mx-auto mt-16 flex max-w-[1080px] items-center gap-3">
-        <div className="h-px flex-1 bg-[#c89c26]" />
+        <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#c89c26]/60" />
         <div className="h-2.5 w-2.5 rotate-45 bg-[#c89c26]" />
-        <div className="h-px flex-1 bg-[#c89c26]" />
+        <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#c89c26]/60" />
       </div>
 
+      {/* ===== Llamado a la acción (CTA) ===== */}
       <div className="relative mx-auto max-w-[800px] pt-10 text-center">
         <h2 className="font-serif text-[34px] font-normal leading-tight tracking-tight text-[#0d0d0d] sm:text-[42px] md:text-[46px]">
           Let’s Make Your Night Unforgettable.

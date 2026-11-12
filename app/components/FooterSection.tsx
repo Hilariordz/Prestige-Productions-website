@@ -20,10 +20,34 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             <Link href="/#reviews" className="hover:text-[#d4af37]">Reviews</Link>
             <Link href="/#contact" className="hover:text-[#d4af37]">Contact</Link>
           </nav>
-          <div className="flex gap-4 text-xs text-white/80" aria-label="Social media">
-            <a href="https://www.instagram.com/prestigeproductionsqc/" aria-label="Instagram">Instagram</a>
-            <a href="https://www.facebook.com/Prestigeproductionsqc/" aria-label="Facebook">Facebook</a>
-            <a href="https://www.youtube.com/" aria-label="YouTube">YouTube</a>
+          <div className="flex items-center gap-4 text-white/80" aria-label="Social media">
+            <a
+              href="https://www.instagram.com/prestigeproductionsqc/"
+              aria-label="Instagram"
+              className="transition-colors hover:text-[#d4af37]"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.014-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.28-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838A6.162 6.162 0 1 0 12 18.163 6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/Prestigeproductionsqc/"
+              aria-label="Facebook"
+              className="transition-colors hover:text-[#d4af37]"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              aria-label="YouTube"
+              className="transition-colors hover:text-[#d4af37]"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" />
+              </svg>
+            </a>
           </div>
         </div>
         <p className="mt-5 text-center text-[11px] text-white/60">© 2026 Prestige Productions. All rights reserved.</p>
