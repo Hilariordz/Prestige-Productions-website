@@ -20,6 +20,12 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             <Link href="/#reviews" className="hover:text-[#d4af37]">Reviews</Link>
             <Link href="/#contact" className="hover:text-[#d4af37]">Contact</Link>
           </nav>
+          <nav className="flex flex-wrap justify-center gap-4 text-[11px] text-white/60" aria-label="Legal">
+            <Link href="/privacy" className="hover:text-[#d4af37]">Privacy</Link>
+            <Link href="/terms" className="hover:text-[#d4af37]">Terms</Link>
+            <Link href="/cookies" className="hover:text-[#d4af37]">Cookies</Link>
+            <Link href="/accessibility" className="hover:text-[#d4af37]">Accessibility</Link>
+          </nav>
           <div className="flex items-center gap-4 text-white/80" aria-label="Social media">
             <a
               href="https://www.instagram.com/prestigeproductionsqc/"
@@ -180,6 +186,12 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             <span>UNFORGETTABLE NIGHTS</span>
           </div>
         </div>
+        <nav className="mt-4 flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-wider text-gray-500" aria-label="Legal">
+          <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+          <Link href="/cookies" className="hover:text-white">Cookie Policy</Link>
+          <Link href="/accessibility" className="hover:text-white">Accessibility</Link>
+        </nav>
       </div>
     </footer>
   );
