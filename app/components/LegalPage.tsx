@@ -25,12 +25,6 @@ export default function LegalPage({
           >
             Prestige Productions
           </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium text-stone-500 transition-colors hover:text-[#a77d16]"
-          >
-            ← Volver al inicio
-          </Link>
         </div>
       </header>
 

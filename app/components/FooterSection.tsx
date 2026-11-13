@@ -7,7 +7,7 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
       <footer className="w-full bg-[#0a0a0a] px-6 py-7 text-white md:px-12">
         <div className="mx-auto flex max-w-[1080px] flex-col items-center justify-between gap-5 md:flex-row">
           <Image
-            src="/images/1340.webp"
+            src="/images/logoprestige.webp"
             alt="Prestige Productions"
             width={160}
             height={50}

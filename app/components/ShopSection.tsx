@@ -1,10 +1,26 @@
 import Image from 'next/image';
 
 const products = [
-  { src: '/glow/led-glasses.jpg', title: 'LED Glasses' },
-  { src: '/glow/glow-sticks.jpg', title: 'Glow Sticks' },
-  { src: '/glow/led-balloons.jpg', title: 'LED Balloons' },
-  { src: '/glow/neon-signs.jpg', title: 'Neon Light Signs' },
+  {
+    src: '/images/led-glasses.webp',
+    title: 'LED Glasses',
+    href: 'https://www.amazon.com/dp/B0BM446W9M?lv=shuf&linkCode=ml1&ascsubtag=srctok-4fb5cd4d65b3de0d&btn_type=ss&linkId=0470918743fd8725c8e4d8ec91a44a14&gaOptInStatus=true&tag=prestigepro0f-20&btn_ref=srctok-4fb5cd4d65b3de0d&channelId=704&ref_=cm_sw_r_as_gl_api_gl_i_31APPTP9TV0F7Z91ME75&plpRedirect=mhFallback',
+  },
+  {
+    src: '/images/glow-sticks.webp',
+    title: 'Glow Sticks',
+    href: 'https://www.amazon.com/dp/B0DNW1HJ2J?lv=shuf&linkCode=ml1&ascsubtag=srctok-6d2000a8389f0869&btn_type=ss&linkId=8c5d4002c8e1d63b1fb109431933597b&gaOptInStatus=true&tag=prestigepro0f-20&btn_ref=srctok-6d2000a8389f0869&channelId=704&ref_=cm_sw_r_as_gl_api_gl_i_GF72R27TH9Z352FGJJDJ&plpRedirect=mhFallback&th=1',
+  },
+  {
+    src: '/images/led-fiber-optic-wands.webp',
+    title: 'LED Fiber Optic Wands',
+    href: 'https://www.amazon.com/dp/B0B2WCNCV3?lv=shuf&linkCode=ml1&ascsubtag=srctok-17864ba6ea7a24f5&btn_type=ss&linkId=5a6186fb38392d64303b1ef026bb726a&gaOptInStatus=true&tag=prestigepro0f-20&btn_ref=srctok-17864ba6ea7a24f5&channelId=704&ref_=cm_sw_r_as_gl_api_gl_i_KPV9ZN2MRYJAYSKXXKCR&plpRedirect=mhFallback&th=1',
+  },
+  {
+    src: '/images/glow-party-bundle.webp',
+    title: '150-Piece Glow Party Bundle',
+    href: 'https://www.amazon.com/dp/B0CWNTL35B?lv=shuf&linkCode=ml1&ascsubtag=srctok-4f90d6af80ebe747&btn_type=ss&linkId=551e0a5c58adb376811dfde2a6f5ff69&gaOptInStatus=true&tag=prestigepro0f-20&btn_ref=srctok-4f90d6af80ebe747&channelId=704&ref_=cm_sw_r_as_gl_api_gl_i_AM784MCMJRNXQ99AX998&plpRedirect=mhFallback',
+  },
 ];
 
 export default function GlowSection() {
@@ -30,23 +46,16 @@ export default function GlowSection() {
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-[#A8A29A]">
             LED and neon party essentials to light up your celebration.
           </p>
-          <a
-            href="#shop"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B8921F] px-6 py-3 text-sm font-medium text-[#0B0B0B] transition-opacity duration-300 hover:opacity-90"
-          >
-            Shop the Glow
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:col-span-8">
           {products.map((item) => (
             <a
               key={item.title}
-              href="#shop"
-              className="group relative h-[200px] overflow-hidden rounded-[4px] border border-[#2A2412] bg-[#111111] sm:h-[240px] lg:h-[260px]"
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative h-[200px] overflow-hidden rounded-[4px] border border-[#2A2412] bg-[#111111] sm:h-[240px] lg:h-[340px]"
             >
               <Image
                 src={item.src}
