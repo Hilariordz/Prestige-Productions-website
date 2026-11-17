@@ -35,20 +35,14 @@ function ServiceCard({ src, title, subtitle, large = false, className = '' }: Se
             <br />
             Effortlessly delivered.
           </h3>
-          <div className="flex justify-end">
-            <ArrowButton />
-          </div>
         </div>
       ) : (
-        <div className="relative flex h-full flex-col justify-between p-5 md:p-6">
+        <div className="relative flex h-full flex-col p-5 md:p-6">
           <div>
             <h3 className="font-serif text-2xl leading-tight text-white md:text-3xl">{title}</h3>
             {subtitle && (
               <p className="mt-1 text-xs leading-relaxed text-white/85 md:text-sm">{subtitle}</p>
             )}
-          </div>
-          <div className="flex justify-end">
-            <ArrowButton />
           </div>
         </div>
       )}
@@ -56,19 +50,9 @@ function ServiceCard({ src, title, subtitle, large = false, className = '' }: Se
   );
 }
 
-function ArrowButton() {
-  return (
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#D4AF37] text-white transition-colors duration-300 group-hover:bg-[#D4AF37] group-hover:text-black">
-      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-    </span>
-  );
-}
-
 export default function ServicesSection() {
   return (
-    <section className="w-full bg-[#F4F0EA] px-5 py-14 md:px-12 md:py-20 lg:px-24">
+    <section id="services" className="scroll-mt-28 w-full bg-[#F4F0EA] px-5 py-14 md:px-12 md:py-20 lg:px-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 flex items-center gap-4 md:mb-10">
           <h2 className="font-serif text-4xl text-[#111111] md:text-5xl">Our Services</h2>

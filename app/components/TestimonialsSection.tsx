@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FAF8F5] text-[#1A1A1A] py-12 px-6 md:px-16 lg:px-24">
+    <section id="reviews" className="scroll-mt-28 w-full bg-[#FAF8F5] text-[#1A1A1A] py-12 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto space-y-8">
         
         <div className="flex items-center gap-4">

@@ -94,10 +94,10 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-16 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          <div className="md:col-span-12">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-start gap-8 md:grid-cols-3">
+          <div className="md:col-span-3">
             <Image
-              src="/images/1340.webp"
+              src="/images/logoprestige.webp"
               alt="Prestige Productions"
               width={160}
               height={50}
@@ -105,7 +105,7 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             />
           </div>
 
-          <div className="md:col-span-4 flex flex-col items-start space-y-3 text-xs text-gray-400">
+          <div className="flex flex-col items-start space-y-3 text-xs text-gray-400">
             <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Contact
             </h3>
@@ -115,20 +115,12 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             <a href="mailto:PrestigeProductionsqc@gmail.com" className="hover:text-white transition-colors">
               PrestigeProductionsqc@gmail.com
             </a>
-            <a
-              href="https://prestigeproductionsqc.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Prestigeproductionsqc.com
-            </a>
             <p className="max-w-xs leading-relaxed">
               Mobile service with no physical address. Traveling internationally across the USA, Mexico, Canada, and South America.
             </p>
           </div>
 
-          <div className="md:col-span-3 space-y-3 md:border-r border-gray-800 pr-4">
+          <div className="space-y-3 md:border-r border-gray-800 pr-4">
             <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Quick Links
             </h3>
@@ -141,6 +133,7 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
             </ul>
           </div>
 
+          {/*
           <div className="md:col-span-3 space-y-3 md:border-r border-gray-800 pr-4">
             <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Our Services
@@ -151,8 +144,9 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
               <li><a href="#packages" className="hover:text-white transition-colors">Event Packages</a></li>
             </ul>
           </div>
+          */}
 
-          <div className="md:col-span-2 space-y-3">
+          <div className="space-y-3">
             <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Follow Us
             </h3>
@@ -176,15 +170,8 @@ export default function FooterSection({ compact = false }: { compact?: boolean }
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-center text-center text-[11px] text-gray-500 gap-4">
           <p>© 2026 Prestige Productions. All rights reserved.</p>
-          <div className="flex items-center gap-3 tracking-widest uppercase text-[10px] text-gray-400">
-            <span>MUSIC</span>
-            <span>|</span>
-            <span>PEOPLE</span>
-            <span>|</span>
-            <span>UNFORGETTABLE NIGHTS</span>
-          </div>
         </div>
         <nav className="mt-4 flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-wider text-gray-500" aria-label="Legal">
           <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
